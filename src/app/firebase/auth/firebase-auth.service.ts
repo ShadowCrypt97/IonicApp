@@ -1,13 +1,13 @@
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Observable, Subject, from, of } from 'rxjs';
 import { DataStore } from '../../shell/data-store';
 import { FirebaseProfileModel } from './profile/firebase-profile.model';
 import { Platform } from '@ionic/angular';
 import { filter, map } from 'rxjs/operators';
 
-import firebase from 'firebase/app';
-import { cfaSignIn, cfaSignOut } from 'capacitor-firebase-auth';
+import firebase from 'firebase/compat/app';
+//import { cfaSignIn, cfaSignOut } from 'capacitor-firebase-auth';
 import { isPlatformBrowser } from '@angular/common';
 
 @Injectable()
@@ -72,7 +72,7 @@ export class FirebaseAuthService {
 
   signOut(): Observable<any> {
     if (this.platform.is('capacitor')) {
-      return cfaSignOut();
+      //return cfaSignOut();
     } else {
       return from(this.angularFire.signOut());
     }
@@ -88,7 +88,7 @@ export class FirebaseAuthService {
 
   socialSignIn(providerName: string, scopes?: Array<string>): Observable<any> {
     if (this.platform.is('capacitor')) {
-      return cfaSignIn(providerName);
+      //return cfaSignIn(providerName);
     } else {
       const provider = new firebase.auth.OAuthProvider(providerName);
 

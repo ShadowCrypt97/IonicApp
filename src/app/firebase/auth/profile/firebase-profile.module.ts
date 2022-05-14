@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { ComponentsModule } from '../../../components/components.module';
 import { FirebaseProfilePage } from './firebase-profile.page';
 import { FirebaseProfileResolver } from './firebase-profile.resolver';
-import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/compat/auth-guard';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['/firebase/auth/sign-in']);
 

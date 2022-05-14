@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { FirebaseSignInPage } from './firebase-sign-in.page';
 import { ComponentsModule } from '../../../components/components.module';
-import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
+import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
 
 import { map } from 'rxjs/operators';
 

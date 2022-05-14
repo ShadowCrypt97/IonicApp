@@ -52,7 +52,7 @@ export class LoginPage {
 
   doLogin(): void {
     console.log('do Log In');
-    this.router.navigate(['app/categories']);
+    this.router.navigate(['home']);
   }
 
   goToForgotPassword(): void {
@@ -61,21 +61,21 @@ export class LoginPage {
 
   doFacebookLogin(): void {
     console.log('facebook login');
-    this.router.navigate(['app/categories']);
+    this.router.navigate(['home']);
   }
 
   doGoogleLogin(): void {
     console.log('google login');
-    this.router.navigate(['app/categories']);
+    this.router.navigate(['home']);
   }
 
   doTwitterLogin(): void {
     console.log('twitter login');
-    this.router.navigate(['app/categories']);
+    this.router.navigate(['home']);
   }
 
   doAppleLogin(): void {
     console.log('apple login');
-    this.router.navigate(['app/categories']);
+    this.router.navigate(['home']);
   }
 }
